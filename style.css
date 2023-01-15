@@ -56,3 +56,15 @@ p{
 #svg tr td{
 	padding: 20px;
 }
+#lnkolkkt input{
+	width:300px;
+	border:0px;
+	font-size:18px;
+	padding:10px;
+}
+#lnkolkkt button{
+	width:100px;
+	padding:10px;
+	border:0px;
+	font-size:18px;
+}

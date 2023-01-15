@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Weblap</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<script>
+			function lnko(){
+				lnko1 = document.getElementById('lnko1').value;
+				lnko2 = document.getElementById('lnko2').value;
+				
+				if (lnko1 >= lnko2) {
+					nagyobb = lnko1;
+				} else {
+					nagyobb = lnko2;
+				}
+				
+				/* ha nincs nagyobb, akkor a közös osztó az 1 lesz */
+				
+				eredmeny = 1;
+				
+				for (i=nagyobb;i>0;i--) {
+					
+					/* nincs még 1-nél nagyobb eredmény */
+					
+					if (eredmeny == 1 && lnko1 % i == 0 && lnko2 % i == 0) {
+						
+						eredmeny = i;
+						
+					}
+					
+				}
+				
+				document.getElementById('lnkoeredmeny').innerHTML = 'legnagyobb közös osztó: '+eredmeny;
+			}
+			function lkkt(){
+				lkkt1 = document.getElementById('lkkt1').value;
+				lkkt2 = document.getElementById('lkkt2').value;
+				
+				if (lkkt1 >= lkkt2) {
+					nagyobb = lkkt1;
+				} else {
+					nagyobb = lkkt2;
+				}
+				
+				eredmeny = 1;
+				
+				for (i=nagyobb;i<=lkkt1*lkkt2;i++) {
+					
+					if (eredmeny == 1 && i % lkkt1 == 0 && i % lkkt2 == 0) {
+						
+						eredmeny = i;
+						
+					}
+					
+				}
+				
+				document.getElementById('lkkteredmeny').innerHTML = 'legkisebb közös többszörös: '+eredmeny;
+			}
+		</script>
+		<h1>Keresztúri Maja Dorina</h1>
+		<p>10/D</p>
+		<center>
+			<table id="lnkolkkt">
+				<tr>
+					<td width="500" align="center">
+						<h2>Legnagyobb közös osztó</h2>
+						<br />
+						<br />
+						<input type="text" id="lnko1">
+						<br />
+						<br />
+						<input type="text" id="lnko2">
+						<br />
+						<br />
+						<button onclick="lnko()">Számol</button>
+						<br />
+						<br />
+						<p id="lnkoeredmeny">add meg a két számot!</p>
+					</td>
+					<td width="500" align="center">
+						<h2>Legkisebb közös többszörös</h2>
+						<br />
+						<br />
+						<input type="text" id="lkkt1">
+						<br />
+						<br />
+						<input type="text" id="lkkt2">
+						<br />
+						<br />
+						<button onclick="lkkt()">Számol</button>
+						<br />
+						<br />
+						<p id="lkkteredmeny">add meg a két számot!</p>
+					</td>
+				</tr>
+			</table>
+		</center>
+		<p><a href="index.html">Vissza a kezdőlapra</a></p>
+	</body>
+</html>
