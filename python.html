@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Weblap</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h1>Keresztúri Maja Dorina</h1>
+		<p>10/D</p>
+		<center>
+			<table>
+				<tr>
+					<td width="800" align="left">
+						<b>7. Bemenet: Két tört számlálója és nevezője.</b>
+						<br />
+						<b>Kimenet: A két tört összege és szorzata.</b>
+						<br />
+						<br />
+						# bekérem a számokat
+						<br />
+						<br />
+						elso_szamlalo = int( input( "Első szám számlálója: " ) );
+						<br />
+						elso_nevezo = int( input( "Első szám nevezője: " ) );
+						<br />
+						<br />
+						masodik_szamlalo = int( input( "Második szám számlálója: " ) );
+						<br />
+						masodik_nevezo = int( input( "Második szám nevezője: " ) );
+						<br />
+						<br />
+						# kiszámolom
+						<br />
+						<br />
+						osszeadas = str( ( ( elso_szamlalo * masodik_nevezo ) + ( elso_nevezo * masodik_szamlalo ) ) ) +  "/" + str( ( elso_nevezo * masodik_nevezo ) );
+						<br />
+						<br />
+						szorzas = str( ( elso_szamlalo * masodik_szamlalo ) ) + "/" + str( ( elso_nevezo * masodik_nevezo ) );
+						<br />
+						<br />
+						# kiírom
+						<br />
+						<br />
+						print( "A két tört összege: " + osszeadas );
+						<br />
+						<br />
+						print( "A két tört szorzata: " + szorzas );
+						<br />
+						<br />
+						<br />
+						kipróbálható: <a href="https://www.programiz.com/python-programming/online-compiler" target="_blank"><u>programiz</u></a>
+					</td>
+				</tr>
+			</table>
+		</center>
+		<br />
+		<br />
+		<p><a href="index.html">Vissza a kezdőlapra</a></p>
+	</body>
+</html>
